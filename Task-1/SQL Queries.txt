@@ -1,0 +1,70 @@
+create database database_name
+use database_name;
+create table event_details(event_id int(4)Primary Key,
+                           event_title varchar(50)not null,
+                           event_short_description varchar(100)null,
+                           event_long_description varchar(250) null,
+                           event_image_url varchar(200)not null,
+                           event_start_date date not null,
+                           event_end_date date not null,
+                           event_venue varchar(250) null,
+                           event_address varchar(250) null,
+                           event_pincode int(6) null,
+			           dateOfCreation timestamp(6) null,
+                           lastModifidedDate timestamp(6) null,
+                           isDelete tinyint(1) 0,
+                           dateOfdeletion timestamp(6) null,
+                           isDisabled tinyint(1) 0 ,
+                           dateOfDisabled tinyint(1) 0 );                           
+                       
+select * form event_details;
+
+
+create table complaint_details(complaint_id int(4)Primary Key,
+                           complaint_title varchar(50)not null,
+                           compaint_description varchar(250)not null,
+                           compaint_category varchar(100)not null,
+                           compaint_isResolving tinyint(1) 0,
+                           compaint_rating int(2) null,
+			           dateOfCreation timestamp(6) null,
+                           lastModifidedDate timestamp(6) null,
+                           isDelete tinyint(1) 0 ,
+                           dateOfdeletion timestamp(6) null,
+                           isDisabled tinyint(1) 0 ,
+                           dateOfDisabled tinyint(1) 0 );
+ 
+select * form complaint_details;
+
+create table otp_details(otpId int(7) Primary Key,
+                          otp_contact varchr(10) not null,
+                          otp int(6) not null,
+                          isExhaust tinyint(1) 0,
+                          dateOfExhaust timestamp(6) null,
+                           dateOfCreation timestamp(6) null,
+                           lastModifidedDate timestamp(6) null,
+                           isDelete tinyint(1) 0 ,
+                           dateOfdeletion timestamp(6) null,
+                           isDisabled tinyint(1) 0 ,
+                           dateOfDisabled tinyint(1) 0 );
+
+select * form otp_details;
+
+create table important_contact(ic_id int(4)Primary Key,
+                           ic_en_fname varchar(50) not null,
+                           ic_en_lname varchar(50) not null
+                           ic_dn_name varchar(50) not null,
+                           ic_mobileno varchar (10) not null,
+                           ic_email varchar(100) null,
+                           ic_category varchar(100) null,
+                           ic_addr varchar(255)null,
+                           ic_pincode int(6) null,
+                           dateOfCreation timestamp(6) null,
+                           lastModifidedDate timestamp(6) null,
+                           isDelete tinyint(1) 0 ,
+                           dateOfdeletion timestamp(6) null,
+                           isDisabled tinyint(1) 0 ,
+                           dateOfDisabled tinyint(1) 0 );
+
+select * form important_contact;
+ 
+                           
